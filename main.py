@@ -1,23 +1,35 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
+from theorem_generator import random_theorem
+
+
 app = FastAPI()
 
 
 @app.get("/", response_class=HTMLResponse)
 @app.get('/index.html', response_class=HTMLResponse)
 async def root():
-    return """
+    theorem = random_theorem()
+    content = f"""
     <html>
         <head>
             <title>Theorems as a Service</title>
         </head>
         <body>
             <h1>Welcome to Theorems as a Service!</h1>
-            <div>Here's a math theorem for you:</div>
+            <div>
+                <p>Here's a math theorem for you:</p>
+            </div>
+            <div>
+                <p>{theorem}</p>
+            </div>
         </body>
     </html>
     """
+    return content
+    
 @app.get("/theorem")
 async def root():
-    return {"theorem": "Pythagorean Theorem: There exist three numbers a b and c, not all the same, such that a^2 + b^2 = c^2 "}
+    theorem = random_theorem()
+    return {"theorem": f"{theorem}"}
