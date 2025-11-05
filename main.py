@@ -9,7 +9,7 @@ app = FastAPI()
 
 @app.get("/", response_class=HTMLResponse)
 @app.get('/index.html', response_class=HTMLResponse)
-async def root():
+async def theorem_html():
     theorem = random_theorem()
     content = f"""
     <html>
@@ -30,6 +30,6 @@ async def root():
     return content
     
 @app.get("/theorem")
-async def root():
+async def theorem_api():
     theorem = random_theorem()
     return {"theorem": f"{theorem}"}
