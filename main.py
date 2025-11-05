@@ -24,6 +24,9 @@ async def theorem_html():
             <div>
                 <p>{theorem}</p>
             </div>
+            <div>
+               <button onClick="window.location.reload();">Refresh Page For Another Theorem</button>
+            </div>
         </body>
     </html>
     """
