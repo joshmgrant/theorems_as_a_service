@@ -15,6 +15,7 @@ async def theorem_html():
     <html>
         <head>
             <title>Theorems as a Service</title>
+            <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
         </head>
         <body>
             <h1>Welcome to Theorems as a Service!</h1>
