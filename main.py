@@ -19,6 +19,14 @@ async def theorem_html():
             <title>Theorems as a Service</title>
             <link id="favicon" rel="icon" type="image/x-icon" href="static/favicon.ico">
             <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+            <script>
+                MathJax = {{
+                tex: {{
+                    inlineMath: {{'[+]': [['$', '$']]}}
+                }}
+                }};
+            </script>
+            <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
         </head>
         <body>
             <h1 style="font-family: Arial;">Welcome to Theorems as a Service!</h1>
