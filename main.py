@@ -18,6 +18,7 @@ async def theorem_html():
         <head>
             <title>Theorems as a Service</title>
             <link id="favicon" rel="icon" type="image/x-icon" href="static/favicon.ico">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
             <script>
                 MathJax = {{
@@ -30,15 +31,17 @@ async def theorem_html():
         </head>
         <body>
             <h1 style="font-family: Arial;">Welcome to Theorems as a Service!</h1>
-            <div style="font-family: Arial;">
-                <p>Here's a math theorem for you:</p>
-            </div>
-            <div style="font-family: Arial;">
-                <p>{theorem}</p>
-            </div>
-            <div style="font-family: Arial;">
-               <button onClick="window.location.reload();">Refresh Page For Another Theorem</button>
-            </div>
+            <main>
+                <div style="font-family: Arial;">
+                    <p>Here's a math theorem for you:</p>
+                </div>
+                <div style="font-family: Arial;">
+                    <p>{theorem}</p>
+                </div>
+                <div style="font-family: Arial;">
+                <button onClick="window.location.reload();">Refresh Page For Another Theorem</button>
+                </div>
+            </main>
         </body>
     </html>
     """
