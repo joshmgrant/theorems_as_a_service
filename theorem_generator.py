@@ -1,6 +1,23 @@
 from random import choice
 
+"""
+Mathematical contributions
 
+Want to contribute a theorem to this service? Excellent!
+
+To add a theorem,
+- add a theorem as an entry at the bottom of the list _theorems_,
+- (recommended) follow the Local development steps below to verify the app still works as expected.
+
+The theorems do allow formating via [MathJax](https://docs.mathjax.org/en/stable/), and there are a few examples in the previously added theorems.
+
+For example, the first theorem is the Pythagorean theorem:
+"Pythagorean Theorem: There exist three numbers $a$, $b$ and $c$, not all the same, such that $a^2 + b^2 = c^2$",
+
+$$ delimit inline mathematical notation, and the whole string uses "" quotes.
+
+Additions will be reviewed and validated. I appreciate all contributions!
+"""
 def random_theorem() -> str:
     theorems = [
         "Pythagorean Theorem: There exist three numbers $a$, $b$ and $c$, not all the same, such that $a^2 + b^2 = c^2$",

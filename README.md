@@ -23,6 +23,19 @@ curl http://theoremsasaservice-production.up.railway.app/theorem
 ```
 from a terminal. Helpful if you're a terminal user.
 
+## Mathematical contributions
+
+Want to contribute a theorem to this service? Excellent!
+
+To add a theorem,
+- go to the file [theorem_generator.py](./theorem_generator.py),
+- add a theorem as an entry at the bottom of the list _theorems_,
+- (recommended) follow the Local development steps below to verify the app still works as expected.
+
+The theorems do allow formating via [MathJax](https://docs.mathjax.org/en/stable/), and there are a few examples in the previously added theorems.
+
+Additions will be reviewed and validated. I appreciate all contributions!
+
 ## Local development
 
 This project uses [uv](https://docs.astral.sh/uv/)
